@@ -29,7 +29,7 @@
         
         else if (nums>10&&nums<100){
             tths = nums - nums%10 - (nums - (nums%100));
-            ones = nums10;
+            ones = nums%10;
 
             document.getElementById("output").innerHTML = "Breakdown: " .concat(tths, ", " , ones);
 
