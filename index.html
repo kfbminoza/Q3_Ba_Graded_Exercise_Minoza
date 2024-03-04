@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="bruh"></p>
+    <p id="output"></p>
+    <p id="date"></p>
+    <script>
+        var num = Math.floor(Math.random()*1001);
+        var nums = num.toString();
+        var hunds;
+        var tths;
+        var ones;
+        var dt = new Date();
+
+        document.getElementById("bruh").innerHTML = "Randomly generated number: " .concat(nums);
+
+        if (nums>100&&nums<1000){
+            hunds = nums.charAt(0) * 100;
+            tths = nums.charAt(1) * 10;
+            ones = nums.charAt(2);
+
+            document.getElementById("output").innerHTML = "Breakdown: " .concat(hunds, ", " , tths, ", " , ones);
+        }
+        
+        else if (nums>10&&nums<100){
+            tths = nums.charAt(0) * 10;
+            ones = nums.charAt(1);
+
+            document.getElementById("output").innerHTML = "Breakdown: " .concat(tths, ", " , ones);
+
+        }
+
+        else if (nums>0&&nums<10){
+            ones = nums.charAt(0);
+
+            document.getElementById.innerHTML = "Breakdown: " .concat(ones);
+        }
+
+        document.getElementById("date").innerHTML = dt;
+    </script>
+</body>
+</html>
