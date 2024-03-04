@@ -20,16 +20,16 @@
         document.getElementById("bruh").innerHTML = "Randomly generated number: " .concat(nums);
 
         if (nums>100&&nums<1000){
-            hunds = nums.charAt(0) * 100;
-            tths = nums.charAt(1) * 10;
-            ones = nums.charAt(2);
+            hunds = nums - (nums%100);
+            tths = nums - nums%10 - (nums - (nums%100));
+            ones = nums%10;
 
             document.getElementById("output").innerHTML = "Breakdown: " .concat(hunds, ", " , tths, ", " , ones);
         }
         
         else if (nums>10&&nums<100){
-            tths = nums.charAt(0) * 10;
-            ones = nums.charAt(1);
+            tths = nums - nums%10 - (nums - (nums%100));
+            ones = nums10;
 
             document.getElementById("output").innerHTML = "Breakdown: " .concat(tths, ", " , ones);
 
